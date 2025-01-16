@@ -41,6 +41,11 @@
             <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
           </div>
         {{/location}}
+        {{#if phone}}
+        <span class='phone'>
+          <a href="tel:{{phone}}">{{phone}}</a>
+        </span>
+        {{/if}}
       </div>
 
       {{#if profiles.length}}
