@@ -2,12 +2,7 @@
   <div class='basics'>
     <div id='basics-left-content'>
       {{!-- note: this content should not appear or have any effect on styling, this is only to enable any automated content parsing --}}
-      <div class='display-none'>
-        {{#location}}
-          <span class='address'>
-            {{address}} {{city}} {{region}} {{postalCode}}
-          </span>
-        {{/location}}
+      <div class='content-block'>
         {{#if phone}}
           <span class='phone'>
             <a href="tel:{{phone}}">{{phone}}</a>
@@ -41,11 +36,6 @@
             <span class='address'>{{city}}, {{STATE_ABBREVIATION_TO_FULL_NAME region}}</span>
           </div>
         {{/location}}
-        {{#if phone}}
-        <span class='phone'>
-          <a href="tel:{{phone}}">{{phone}}</a>
-        </span>
-        {{/if}}
       </div>
 
       {{#if profiles.length}}
